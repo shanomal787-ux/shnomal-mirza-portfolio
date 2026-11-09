@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shnomal Mirza | AI Engineer & Builder</title>
+<meta name="description" content="Shnomal Mirza is an aspiring AI engineer from Multan building practical, responsible AI: NLP, computer vision, assistants and chatbots.">
+<meta property="og:title" content="Shnomal Mirza | AI Engineer & Builder">
+<meta property="og:description" content="Practical, responsible AI: NLP, computer vision, assistants and chatbots.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shnomal Mirza | AI Engineer & Builder">
+<meta name="twitter:description" content="Practical, responsible AI that ships.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shnomal Mirza","jobTitle":"AI Engineer","email":"mailto:shanomal787@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Multan","addressCountry":"PK"},"sameAs":["https://github.com/Shnomal_Mirza","https://www.fiverr.com/shnomalcreates"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN TOKENS ===== */
+:root{
+  --bg:#faf8f4;--surface:#fff;--text:#1a1a1f;--muted:#5b5b66;--line:#e4e0d8;--accent:#b45309;--accent-ink:#fff;
+  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2.5rem;--s5:5rem;
+  --fs-sm:.875rem;--fs-md:1.0625rem;--fs-lg:1.375rem;--fs-xl:clamp(2rem,5vw,3.25rem);--fs-hero:clamp(2.6rem,8vw,5.2rem);
+  --r:14px;--shadow:0 6px 24px rgba(30,25,10,.08);
+  --display:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0f12;--surface:#16181d;--text:#ecebe6;--muted:#a3a3ad;--line:#2a2d34;--accent:#fbbf24;--accent-ink:#111;--shadow:0 6px 24px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0e0f12;--surface:#16181d;--text:#ecebe6;--muted:#a3a3ad;--line:#2a2d34;--accent:#fbbf24;--accent-ink:#111;--shadow:0 6px 24px rgba(0,0,0,.4)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:400 var(--fs-md)/1.65 var(--sans);overflow-x:hidden}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0 0 var(--s2)}
+h2{font-size:var(--fs-xl)} h3{font-size:var(--fs-lg)}
+p{margin:0 0 var(--s2)} a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--s3)}
+section{padding:var(--s5) 0}
+.eyebrow{font:500 var(--fs-sm)/1 var(--mono);color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:var(--s2);display:block}
+.muted{color:var(--muted)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:999px;border:1.5px solid var(--text);font:600 .95rem var(--sans);text-decoration:none;cursor:pointer;background:transparent;color:var(--text);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chip{display:inline-block;font:500 .75rem var(--mono);padding:.25rem .6rem;border:1px solid var(--line);border-radius:999px;color:var(--muted);margin:0 .3rem .4rem 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.grid{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+/* ===== NAV ===== */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav{display:flex;align-items:center;gap:var(--s2);height:64px}
+.logo{font:700 1.25rem var(--display);text-decoration:none;margin-right:auto}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:var(--s3);align-items:center}
+.links a{font-size:.9rem;text-decoration:none;color:var(--muted)} .links a:hover{color:var(--text)}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;font-size:1.1rem}
+#menu{display:none}
+@media(max-width:860px){
+  #menu{display:inline-block}
+  .links{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:var(--s3);border-bottom:1px solid var(--line);display:none}
+  .links.open{display:flex} nav .btn.primary{display:none}
+}
+/* ===== HERO ===== */
+.hero{padding-top:var(--s4)}
+.hero-grid{display:grid;gap:var(--s4);grid-template-columns:1.1fr .9fr;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+h1{font-size:var(--fs-hero);letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:var(--fs-lg);font-family:var(--display);margin-bottom:var(--s2)}
+.cta-row{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s3)}
+.term{background:#111318;color:#d9d8d2;border-radius:var(--r);box-shadow:var(--shadow);font:400 .85rem/1.7 var(--mono);overflow:hidden;border:1px solid var(--line)}
+.term-bar{padding:.6rem 1rem;border-bottom:1px solid #2a2d34;color:#8b8b95;font-size:.75rem}
+.term pre{margin:0;padding:var(--s2) 1.2rem;min-height:250px;white-space:pre-wrap;word-break:break-word}
+.term .k{color:#fbbf24}.term .g{color:#86efac}
+.caret{display:inline-block;width:8px;height:1em;background:#fbbf24;vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+/* ===== ABOUT / TABS / TIMELINE ===== */
+.two{display:grid;gap:var(--s4);grid-template-columns:1.3fr 1fr}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2)}
+.fact b{display:block;font:700 1.6rem var(--display);color:var(--accent)}
+.tabs{display:flex;gap:var(--s1);margin-bottom:var(--s3);flex-wrap:wrap}
+.tab[aria-selected="true"]{background:var(--text);color:var(--bg)}
+.panel ul{margin:0;padding-left:1.2rem} .panel li{margin-bottom:.4rem}
+.badge{font:500 .7rem var(--mono);border:1px solid var(--accent);color:var(--accent);border-radius:999px;padding:.15rem .6rem}
+.filters{display:flex;gap:var(--s1);flex-wrap:wrap;margin-bottom:var(--s3)}
+.filters .btn[aria-pressed="true"]{background:var(--text);color:var(--bg)}
+.card dl{margin:var(--s2) 0;font-size:.95rem} .card dt{font:500 .72rem var(--mono);color:var(--accent);text-transform:uppercase;margin-top:.6rem}
+.card dd{margin:0}
+.tl{border-left:2px solid var(--line);margin-left:.5rem;padding-left:var(--s3)}
+.tl-item{position:relative;margin-bottom:var(--s3)}
+.tl-item::before{content:"";position:absolute;left:calc(-1*var(--s3) - 7px);top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl-item time{font:500 var(--fs-sm) var(--mono);color:var(--muted)}
+/* ===== CONTACT / FOOTER ===== */
+form{display:grid;gap:var(--s2)}
+label{font-size:var(--fs-sm);font-weight:600;display:grid;gap:.3rem}
+input,select,textarea{font:inherit;padding:.75rem;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--text);width:100%}
+.err{color:#b91c1c;font-size:.8rem;min-height:1em;font-weight:500}
+:root[data-theme="dark"] .err{color:#fca5a5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#fca5a5}}
+footer{border-top:1px solid var(--line);padding:var(--s3) 0;font-size:var(--fs-sm);color:var(--muted)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--s2)}
+.foot nav{height:auto;gap:var(--s2)}
+/* ===== MOTION ===== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--accent);color:var(--accent-ink);padding:.5rem 1rem;z-index:99}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== NAVIGATION ===== -->
+<header>
+  <div class="wrap"><nav aria-label="Primary">
+    <a class="logo" href="#top" aria-label="Shnomal Mirza, home">Shnomal<span>.</span>M</a>
+    <div class="links" id="links">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#ventures">Ventures</a>
+      <a href="#projects">Projects</a><a href="#stack">Stack</a><a href="#experience">Experience</a><a href="#services">Services</a>
+    </div>
+    <button class="icon-btn" id="theme" aria-label="Toggle light and dark theme">◐</button>
+    <a class="btn primary" href="#contact">Work with me</a>
+    <button class="icon-btn" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links">☰</button>
+  </nav></div>
+</header>
+
+<main id="main">
+<!-- ===== HERO ===== -->
+<section class="hero" id="top"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow">AI Engineer · Multan, Pakistan</span>
+    <h1>Shnomal <em>Mirza</em></h1>
+    <p class="lead">Building practical AI that turns complex problems into useful tools.</p>
+    <p class="muted">I work on NLP, computer vision and assistants, from data preparation to a working product, with reliability and responsible use in mind.</p>
+    <div class="cta-row"><a class="btn primary" href="#contact">Work with me</a><a class="btn" href="#projects">See projects</a></div>
+  </div>
+  <div class="term" role="img" aria-label="Animated terminal showing a short AI workflow">
+    <div class="term-bar">● ● ●&nbsp; shnomal@ai ~ pipeline</div>
+    <pre id="typed" aria-hidden="true"></pre>
+  </div>
+</div></section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about"><div class="wrap two">
+  <div class="reveal">
+    <span class="eyebrow">About</span><h2>Technology with a purpose.</h2>
+    <p>I’m an aspiring AI engineer focused on building intelligent solutions that make a meaningful impact. I aim to bring together technical expertise, thoughtful problem-solving and innovation to help shape the future of AI.</p>
+    <p class="muted">I care about both sides of the work: building the technology well, and shaping it into something people can actually use.</p>
+  </div>
+  <div class="facts reveal">
+    <div class="card fact"><b>Python</b>Primary language</div>
+    <div class="card fact"><b>5</b>Projects built</div>
+    <div class="card fact"><b>NLP + CV</b>Focus areas</div>
+    <div class="card fact"><b>Multan</b>Mumtazabad, PK</div>
+  </div>
+</div></section>
+
+<!-- ===== EXPERTISE ===== -->
+<section id="expertise"><div class="wrap">
+  <span class="eyebrow">Expertise</span><h2>Engineering, and the business around it.</h2>
+  <div class="tabs" role="tablist" aria-label="Expertise areas">
+    <button class="btn tab" role="tab" aria-selected="true" aria-controls="p1" id="t1">AI Engineering</button>
+    <button class="btn tab" role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">Entrepreneurship</button>
+  </div>
+  <div class="card panel" role="tabpanel" id="p1" aria-labelledby="t1"><ul>
+    <li>Machine learning for NLP and computer vision</li><li>LLM applications and chatbots</li><li>Data preparation and pipelines</li><li>Model evaluation and reliability</li><li>Responsible, thoughtful use of AI</li></ul></div>
+  <div class="card panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden><ul>
+    <li>Turning technical ideas into accessible tools</li><li>Product thinking and problem framing</li><li>Freelance delivery (Fiverr)</li><li>Collaboration and clear communication of results</li><li>[EDIT] Add go-to-market or fundraising experience if relevant</li></ul></div>
+</div></section>
+
+<!-- ===== VENTURES ===== -->
+<section id="ventures"><div class="wrap">
+  <span class="eyebrow">Ventures</span><h2>What I’m building toward.</h2>
+  <div class="grid" id="ventureGrid"></div>
+</div></section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects"><div class="wrap">
+  <span class="eyebrow">Featured projects</span><h2>Things I’ve built.</h2>
+  <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+  <div class="grid" id="projectGrid"></div>
+</div></section>
+
+<!-- ===== TECH STACK ===== -->
+<section id="stack"><div class="wrap">
+  <span class="eyebrow">Tech stack</span><h2>Tools I use.</h2>
+  <div class="grid" id="stackGrid"></div>
+</div></section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience"><div class="wrap">
+  <span class="eyebrow">Experience</span><h2>Path so far.</h2>
+  <div class="tl">
+    <div class="tl-item reveal"><time>[EDIT] Year – Present</time><h3>Machine Learning Practitioner</h3>
+      <p class="muted">Developed and evaluated ML solutions across natural language processing and computer vision, taking projects from data preparation through implementation. Applied Python and AI frameworks to practical problems, collaborated on technical work, and presented results with attention to reliability and responsible use.</p></div>
+    <div class="tl-item reveal"><time>[EDIT] Year – Present</time><h3>Freelance AI Services</h3>
+      <p class="muted">Delivering AI projects for clients through Fiverr. [EDIT] Add details.</p></div>
+  </div>
+</div></section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services"><div class="wrap">
+  <span class="eyebrow">Work with me</span><h2>How I can help.</h2>
+  <div class="grid">
+    <div class="card reveal"><h3>AI Prototype Build</h3><p class="muted">Chatbots, assistants or classifiers built end to end.</p><ul><li>Scoping and data prep</li><li>Model build and evaluation</li><li>Working demo and handover</li></ul><a class="btn" href="#contact">Get in touch</a></div>
+    <div class="card reveal"><h3>NLP & Urdu Language AI</h3><p class="muted">Sentiment analysis and text tools for Urdu content.</p><ul><li>Dataset review</li><li>Model training</li><li>Evaluation report</li></ul><a class="btn" href="#contact">Get in touch</a></div>
+    <div class="card reveal"><h3>Freelance on Fiverr</h3><p class="muted">Smaller, fixed-scope AI tasks.</p><ul><li>Clear packages</li><li>Fast turnaround</li><li>Direct support</li></ul><a class="btn" href="https://www.fiverr.com/shnomalcreates" target="_blank" rel="noopener">View my gigs</a></div>
+  </div>
+</div></section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact"><div class="wrap two">
+  <div><span class="eyebrow">Contact</span><h2>Let’s build something.</h2>
+    <p class="muted">Tell me about your project. I’ll reply by email.</p>
+    <p><a href="mailto:shanomal787@gmail.com">shanomal787@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/search/results/all/?keywords=Shnomal%20Mirza" target="_blank" rel="noopener">LinkedIn: Shnomal Mirza</a> <span class="muted">[EDIT] direct profile URL</span><br>
+    <a href="https://github.com/Shnomal_Mirza" target="_blank" rel="noopener">GitHub: Shnomal_Mirza</a><br>
+    <a href="https://www.fiverr.com/shnomalcreates" target="_blank" rel="noopener">Fiverr: shnomalcreates</a></p>
+  </div>
+  <form id="form" novalidate aria-label="Contact form">
+    <label>Name<input name="name" autocomplete="name" required><span class="err" aria-live="polite"></span></label>
+    <label>Email<input name="email" type="email" autocomplete="email" required><span class="err" aria-live="polite"></span></label>
+    <label>Organisation (optional)<input name="org" autocomplete="organization"></label>
+    <label>Inquiry type<select name="type"><option>Project</option><option>Collaboration</option><option>Hiring</option><option>Other</option></select></label>
+    <label>Message<textarea name="msg" rows="5" required></textarea><span class="err" aria-live="polite"></span></label>
+    <button class="btn primary" type="submit">Send via email</button>
+    <p class="muted" id="status" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer><div class="wrap foot">
+  <span>© <span id="yr"></span> Shnomal Mirza</span>
+  <nav aria-label="Social"><a href="https://github.com/Shnomal_Mirza" target="_blank" rel="noopener">GitHub</a><a href="https://www.fiverr.com/shnomalcreates" target="_blank" rel="noopener">Fiverr</a><a href="mailto:shanomal787@gmail.com">Email</a></nav>
+  <a href="#top">Back to top ↑</a>
+</div></footer>
+
+<script>
+/* ===== CONTENT DATA (edit here) ===== */
+const VENTURES=[
+ {name:"Practical AI Solutions",desc:"Turning complex challenges into useful, accessible tools.",role:"Founder",status:"Building",metric:"[EDIT] metric",link:"#contact"},
+ {name:"Everyday Technology",desc:"Creating technology that improves how people live and work.",role:"Builder",status:"Building",metric:"[EDIT] metric",link:"#contact"},
+ {name:"Responsible Innovation",desc:"Advancing innovation through thoughtful, responsible applications of AI.",role:"Engineer",status:"Building",metric:"[EDIT] metric",link:"#contact"}
+];
+const GH="https://github.com/Shnomal_Mirza";
+const PROJECTS=[
+ {title:"AI-Powered Personal Assistant",cat:"Agents",problem:"Everyday tasks need quick, helpful answers.",approach:"An assistant that understands requests and responds usefully.",stack:["Python","LLM"],outcome:"[EDIT] outcome metric"},
+ {title:"Urdu Sentiment Analysis",cat:"ML",problem:"Urdu text is underserved by sentiment tools.",approach:"NLP pipeline to classify sentiment in Urdu text.",stack:["Python","NLP","scikit-learn"],outcome:"[EDIT] accuracy"},
+ {title:"Resume & Job Matcher",cat:"Products",problem:"Candidates struggle to find fitting roles.",approach:"Compares resumes with job descriptions to rank matches.",stack:["Python","NLP"],outcome:"[EDIT] outcome metric"},
+ {title:"Image Classification App",cat:"ML",problem:"Images need to be sorted automatically.",approach:"Computer vision model wrapped in a simple app.",stack:["Python","CV","Deep Learning"],outcome:"[EDIT] accuracy"},
+ {title:"Customer Support Chatbot",cat:"Agents",problem:"Support teams answer repetitive questions.",approach:"A chatbot that handles common customer queries.",stack:["Python","LLM"],outcome:"[EDIT] outcome metric"}
+];
+const STACK={"Languages":["Python","JavaScript","SQL"],"LLM & AI":["LLMs","NLP","Computer Vision","Prompt design"],"Frameworks":["PyTorch","TensorFlow","scikit-learn","[EDIT]"],"Cloud & MLOps":["Git","[EDIT] Docker","[EDIT] Cloud"],"Data":["Pandas","NumPy","Data cleaning"]};
+
+/* ===== HELPERS ===== */
+const $=s=>document.querySelector(s),el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h)e.innerHTML=h;return e};
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+$("#yr").textContent=new Date().getFullYear();
+
+/* ===== THEME TOGGLE ===== */
+const root=document.documentElement;
+try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
+$("#theme").onclick=()=>{
+  const dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  root.dataset.theme=dark?"light":"dark";
+  try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}
+};
+
+/* ===== MOBILE MENU ===== */
+$("#menu").onclick=e=>{const o=$("#links").classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o)};
+document.querySelectorAll("#links a").forEach(a=>a.onclick=()=>{$("#links").classList.remove("open");$("#menu").setAttribute("aria-expanded","false")});
+
+/* ===== HERO TERMINAL ===== */
+const lines=[["$ ","python train.py --task urdu-sentiment"],["","<span class=g>✓</span> data cleaned and split"],["","<span class=g>✓</span> model trained"],["","<span class=g>✓</span> evaluated: precision, recall, F1"],["$ ","python app.py --ship"],["","<span class=k>→</span> built to be reliable and responsible"]];
+const out=$("#typed");
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){out.innerHTML=lines.map(l=>l[0]+l[1]).join("\n")}
+else{let i=0;(function next(){if(i>=lines.length){out.innerHTML+='<span class=caret></span>';return}
+  const [p,t]=lines[i++];const plain=p&&!t.includes("<");let n=0;const base=out.innerHTML.replace(/<span class="?caret"?><\/span>/,"");
+  if(plain){const id=setInterval(()=>{out.innerHTML=base+p+t.slice(0,++n)+'<span class=caret></span>';if(n>=t.length){clearInterval(id);setTimeout(next,350)}},35)}
+  else{out.innerHTML=base+p+t+"\n";setTimeout(next,450)}
+  if(plain&&false){}
+})()}
+
+/* ===== EXPERTISE TABS ===== */
+const tabs=[...document.querySelectorAll(".tab")];
+function pick(t){tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;$("#"+x.getAttribute("aria-controls")).hidden=!on})}
+tabs.forEach(t=>{t.onclick=()=>pick(t);t.onkeydown=e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=tabs[(tabs.indexOf(t)+1)%tabs.length];pick(n);n.focus()}}});
+
+/* ===== VENTURES ===== */
+VENTURES.forEach(v=>{const c=el("article","card reveal",`<div style="display:flex;justify-content:space-between;gap:1rem"><h3>${esc(v.name)}</h3><span class="badge">${esc(v.status)}</span></div><p class="muted">${esc(v.desc)}</p><p><b>Role:</b> ${esc(v.role)}<br><b>Metric:</b> ${esc(v.metric)}</p><a href="${v.link}">Learn more →</a>`);$("#ventureGrid").append(c)});
+
+/* ===== PROJECTS + FILTER ===== */
+const cats=["All",...new Set(PROJECTS.map(p=>p.cat))];
+function renderProjects(f){$("#projectGrid").innerHTML="";PROJECTS.filter(p=>f==="All"||p.cat===f).forEach(p=>{
+  $("#projectGrid").append(el("article","card reveal in",`<span class="badge">${esc(p.cat)}</span><h3 style="margin-top:.6rem">${esc(p.title)}</h3><dl><dt>Problem</dt><dd>${esc(p.problem)}</dd><dt>Approach</dt><dd>${esc(p.approach)}</dd><dt>Outcome</dt><dd>${esc(p.outcome)}</dd></dl><div>${p.stack.map(s=>`<span class="chip">${esc(s)}</span>`).join("")}</div><a href="${GH}" target="_blank" rel="noopener">GitHub →</a>`))})}
+cats.forEach(c=>{const b=el("button","btn",c);b.setAttribute("aria-pressed",c==="All");b.onclick=()=>{document.querySelectorAll("#filters .btn").forEach(x=>x.setAttribute("aria-pressed",x===b));renderProjects(c)};$("#filters").append(b)});
+renderProjects("All");
+
+/* ===== TECH STACK ===== */
+Object.entries(STACK).forEach(([g,items])=>$("#stackGrid").append(el("div","card reveal",`<h3 style="font-size:1.1rem">${g}</h3>${items.map(i=>`<span class="chip">${esc(i)}</span>`).join("")}`)));
+
+/* ===== CONTACT FORM ===== */
+$("#form").addEventListener("submit",e=>{e.preventDefault();const f=e.target;let ok=true;
+  const rule={name:v=>v.trim()?"":"Please enter your name.",email:v=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)?"":"Please enter a valid email.",msg:v=>v.trim().length>=10?"":"Please write at least 10 characters."};
+  for(const k in rule){const i=f.elements[k],m=rule[k](i.value);i.parentElement.querySelector(".err").textContent=m;i.setAttribute("aria-invalid",!!m);if(m)ok=false}
+  if(!ok)return;
+  const body=`Name: ${f.name.value}\nEmail: ${f.email.value}\nOrganisation: ${f.org.value}\nType: ${f.type.value}\n\n${f.msg.value}`;
+  location.href=`mailto:shanomal787@gmail.com?subject=${encodeURIComponent("Portfolio inquiry: "+f.type.value)}&body=${encodeURIComponent(body)}`;
+  $("#status").textContent="Opening your email app. If nothing happens, write to shanomal787@gmail.com directly."});
+
+/* ===== SCROLL REVEAL ===== */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(r=>io.observe(r));
+</script>
+</body>
+</html>
